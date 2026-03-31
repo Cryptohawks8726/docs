@@ -1,7 +1,0 @@
-[book]
-title = "Test Book"
-authors = ["DrewCodesBadly"]
-language = "en"
-
-[output.html]
-mathjax-support = true
