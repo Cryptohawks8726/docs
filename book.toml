@@ -5,3 +5,4 @@ language = "en"
 
 [output.html]
 mathjax-support = true
+git-repository-url = "https://github.com/Cryptohawks8726/Docs"
