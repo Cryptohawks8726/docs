@@ -1,7 +1,7 @@
 (Needs proofreading! Written by: Dhruva)
 
 
-![logo](../../theme/logo.png "hawk")
+![logo](../images/logo.png "hawk")
 
 # About This Book
 
