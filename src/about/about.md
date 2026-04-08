@@ -1,5 +1,8 @@
 (Needs proofreading! Written by: Dhruva)
 
+
+![logo](../../theme/logo.png "hawk")
+
 # About This Book
 
 This is a palce to store any and all resources and information relating to FRC Team 8726's control subteam
