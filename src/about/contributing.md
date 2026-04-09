@@ -84,6 +84,25 @@ Wrap inline equations in `\\( \\)` and equations that need their own line in `\\
 Looks like:
 \\(F_f = \mu \times F_N \\)
 
+## Linking to other parts of the documentation
+
+Inserting hyperlinks in markdown is done using this syntax: `[display text](https://example.com)`.
+The same syntax is used to link to other parts of the book similar
+to how you would link to other parts of a normal website. Instead of a URL,
+use the path to the page you want to link to relative to the `src` folder and starting with a '/'.
+For example, this page is located at `src/about/contributing.md`, so if you wanted to link to it,
+you could write: `[contributing page](/about/contributing.md)`.
+
+If you want to link to a specific section of a page, you can do that by adding
+a '#' after the file and then the name of the section, converted to `kebab-case`
+with special characters like '.' removed.
+
+These URLs are the same as the end of the URL you see in your browser when you visit
+a certain page of the docs, so you can also just copy everything after `.github.io/docs`
+and use that as the link if you aren't sure what to put. For example, the link to this
+section is `https://cryptohawks8726.github.io/docs/about/contributing.html#linking-to-other-parts-of-the-documentation`,
+so to link to this section you would use `/about/contributing.html#linking-to-other-parts-of-the-documentation`.
+
 ## What's with `highlight.js`?
 
 As mentioned earlier, the files in the `theme` folder overwrite
