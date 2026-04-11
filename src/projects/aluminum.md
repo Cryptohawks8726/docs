@@ -7,7 +7,7 @@ Aluminum is an app made by the team. It should be kept up to date on all team la
 If it is not installed or is out of date, please let someone know or update it yourself.
 
 Aluminum has a variety of utilities and may have more features added in the future.
-It can communicate with robots through [NetworkTables](programming/nt.md), allowing
+It can communicate with robots through [NetworkTables](../programming/nt.md), allowing
 the app to observe and change data sent from the robot. It can also connect to a
 simulated robot.
 

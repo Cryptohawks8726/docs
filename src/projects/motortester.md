@@ -10,14 +10,14 @@ with roboRIOs. This code currently works with motors controlled by SparkMax moto
 controllers or TalonFX controllers, but support for other motor types may be added.
 
 This code can also play music in the `.chrp` format on
-[Kraken X60 motors](/parts/kraken.md#playing-sounds).
+[Kraken X60 motors](../parts/kraken.md#playing-sounds).
 
 ## Why was this made?
 
 This was primarily made for testing prototypes. The team often wants to make prototypes of subsystems
 using basic materials, and to test them a couple of motors may need to be
 run at the same time with specific speeds. While this can be done using
-[REV Hardware Client](/software/rhc.md), only one motor can be run at
+[REV Hardware Client](../software/rhc.md), only one motor can be run at
 a time so multiple laptops must be used, which makes things get messy.
 By deploying the MotorTester code to a roboRIO (or SystemCore in the future),
 multiple motors can be configured and run at once. You can also easily
@@ -27,15 +27,15 @@ see the speed and position of the motor's built-in encoder.
 
 MotorTester exposes some values in NetworkTables which can be used to
 register connected motors and then control the connected motors.
-This is most easily done using [Aluminum](/software/aluminum.md),
+This is most easily done using [Aluminum](../software/aluminum.md),
 which has an interface to add or run motors. However, it can
-also be used manually through a tool like [Glass](/software/wpilib.md).
+also be used manually through a tool like [Glass](../software/wpilib.md).
 
 First, deploy the MotorTester code onto the roboRIO (or SystemCore)
 and ensure all motors are connected to the CAN bus and are receiving power.
 You will need to know the CAN IDs of each motor, so make sure to check
 or set them if needed. Additionally, make sure you have the
-[driver station](/software/ds.md) open, as you will need it to enable
+[driver station](../software/ds.md) open, as you will need it to enable
 and disable the robot.
 
 Then, add each motor to the list of connected motors. In Aluminum,

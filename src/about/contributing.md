@@ -89,10 +89,11 @@ Looks like:
 Inserting hyperlinks in markdown is done using this syntax: `[display text](https://example.com)`.
 The same syntax is used to link to other parts of the book similar
 to how you would link to other parts of a normal website. Instead of a URL,
-use the path to the page you want to link to relative to the `src` folder and starting with a '/'.
-For example, this page is located at `src/about/contributing.md`, so if you wanted to link to it,
-you could write: `[contributing page](/about/contributing.md)`. You can either use the markdown
-file ending (.md) or swap it out for .html, since an HTML file of the same name will be generated
+use the file path or the filename of the page you want to link to.
+If you are linking to a page found in the same folder as the current page, then simply use the filename. Otherwise, you would need to cd back into the `/src` folder using `../` and then follow it up with the path to the destination (you may need to write `../` more than once).
+For example, this page is located at `src/about/contributing.md`. If I wanted to provide a link to `about.md`, which is found in the same folder, then I would write `[about page](about.md)`.
+If I wanted to link to the inventory page, which is found under `/src/parts/`, then I would write `(inventory page)[../parts/inventory.md]`.
+You can either use the markdown file ending (.md) or swap it out for .html, since an HTML file of the same name will be generated
 when the book is built.
 
 If you want to link to a specific section of a page, you can do that by adding
@@ -103,7 +104,7 @@ These URLs are the same as the end of the URL you see in your browser when you v
 a certain page of the docs, so you can also just copy everything after `.github.io/docs`
 and use that as the link if you aren't sure what to put. For example, the link to this
 section is `https://cryptohawks8726.github.io/docs/about/contributing.html#linking-to-other-parts-of-the-documentation`,
-so to link to this section you would use `/about/contributing.html#linking-to-other-parts-of-the-documentation`.
+so to link to this section you would use `contributing.html#linking-to-other-parts-of-the-documentation`.
 
 ## What's with `highlight.js`?
 
