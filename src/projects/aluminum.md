@@ -1,5 +1,4 @@
 (Needs proofreading! Written by: Dhruva)
-(TODO: FINISH)
 
 # Aluminum
 
