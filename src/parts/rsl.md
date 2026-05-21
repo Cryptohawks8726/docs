@@ -16,7 +16,7 @@ The RSL is a large LED light used to determine the current status of the robot; 
 
 The RSL has 3 power ports. The middle port is for the negative terminal (black wire). The two outer ports are for the positive terminal (red wires).
 
-<img src="../images/rsl.jpg" alt="RSL image" width="200" height="auto">
+<img src="../images/rsl.jpg" alt="RSL image" width="500" height="auto">
 
 Run the main red wire through `La`, then connect `La` and `Lb` with a separate red wire that will act as a jumper cable. Connect `La` to `S` and `N` to Ground on the roboRIO.
 
