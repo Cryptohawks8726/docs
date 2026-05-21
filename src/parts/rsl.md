@@ -5,6 +5,7 @@ ismail - not proofread
 
 The RSL is a large LED light used to determine the current status of the robot; it is mandatory for competition. The robot's status is determined by 3 different modes:
 
+| Mode           | Meaning                              |
 | -------------- | ------------------------------------ |
 | ON and SOLID   | Robot is on and disabled             |
 | ON and BLINKING| Robot is on and enabled              |
