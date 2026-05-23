@@ -41,6 +41,7 @@
   - [SwerveBase](projects/swervebase.md)
   - [MotorTester](projects/motortester.md)
 - [Electrical Guide](electrical/electrical.md)
+  - [The Can Bus](electrical/can_bus.md)
 - [Programming Guide](programming/programming.md)
   - [Overview of WPILib and Robot Code](programming/wpilib.md)
   - [Interfacing with Physical Devices](programming/physical_devices.md)
