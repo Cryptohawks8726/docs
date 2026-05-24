@@ -1,11 +1,10 @@
 (Needs proofreading! Written by: Dhruva)
 
-
-![logo](../images/bigbrainhawk.png "hawk")
+![logo](../images/bigbrainhawk.png)
 
 # About This Book
 
-This is a palce to store any and all resources and information relating to FRC Team 8726's control subteam
+This is a place to store any and all resources and information relating to FRC Team 8726's control subteam
 to provide a quick reference to all members and teach new members or members of other subteams
 some basics. You can quickly access this site anytime you need to on a laptop or phone
 at this URL.

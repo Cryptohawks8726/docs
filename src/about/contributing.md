@@ -123,6 +123,14 @@ You can also use the full URL without the domain name, for example, `/docs/about
 However, this will not work if the site is run locally or deployed somewhere other than /docs, so
 it is recommended to use the local file paths instead.
 
+## Templates
+
+The "List of Parts" and "FRC Software" chapters each have a file called "template.md" in their respective
+folders in the repository. When adding pages to these chapters you should copy the template and fill in the
+sections listed in the template to ensure you've covered everything. If a section of the template does not
+apply to the specific part or software it is recommended to specify that it does not apply instead of
+removing the section to avoid confusion.
+
 ## What's with `highlight.js`?
 
 As mentioned earlier, the files in the `theme` folder overwrite
@@ -154,6 +162,6 @@ Below are some helpful resources to reference when creating docs:
 > [!IMPORTANT]
 > Please don't copy these verbatim. Only include information that is necessary and specific to our needs.
 
-| Resource        | Description |
-| ------------ | ------------ |
-| [REV Documention](https://docs.revrobotics.com/)  | Provides information on different REV components/software (components are found in their own subcategories)|
+| Resource                                         | Description                                                                                                 |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| [REV Documention](https://docs.revrobotics.com/) | Provides information on different REV components/software (components are found in their own subcategories) |
