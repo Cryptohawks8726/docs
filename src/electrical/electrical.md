@@ -41,50 +41,45 @@ The main breaker is a 120A circuit breaker that acts as the robot's master power
 
 ### Power Distribution Hub (PDH)
 
-The PDH (REV Power Distribution Hub) takes power from the battery and distributes it to every component on the robot. It has 20 high-current channels (40A each) and 3 low-current channels (15A or 20A). Each channel has a snap-action breaker.
+The PDH (REV Power Distribution Hub) takes power from the battery and distributes it to every component on the robot. It has 20 high-current channels (40A max each) and 3 low-current channels. Each channel has a snap-action breaker.
 
 - Each channel can be individually switched off or on in software.
 - The PDH communicates with the robot over CAN bus.
-- Connect the PDH to the RoboRIO using a CAN connection and a 20A breaker channel for the RoboRIO's power input.
-- Route the 12V/2A output to the VRM for radio power.
+- Connect the PDH to the RoboRIO using a CAN connection and a 10A breaker channel for the RoboRIO power input.
+- Power the radio directly from a PDH channel with a 10A breaker. Do not use the VRM for radio power.
 
 **Breaker sizes by component:**
 
 | Component | Breaker Size |
 |---|---|
-| Drive motors (Falcon 500, NEO) | 40A |
-| Smaller motors (NEO 550, etc.) | 20A or 30A |
+| Drive motors (Falcon 500, Kraken X60, NEO) | 40A |
+| Smaller motors (NEO 550, Minion, etc.) | 20A or 30A |
 | RoboRIO | 10A |
-| VRM | 20A |
-| PCM/PH | 20A |
+| Radio (VH-109) | 10A |
+| Pneumatic Hub (PH) | 20A |
 
-> **Note:** Always check the FRC rules and component documentation for the required breaker size. Using the wrong size can trip breakers during matches or damage components.
+> **Note:** Always check the FRC game manual and component documentation for the required breaker size. Using the wrong size can trip breakers during matches or damage components.
 
 ### RoboRIO
 
-The RoboRIO is the main controller of the robot. It runs your team's code and communicates with all other components. It connects to the PDH for power (6.8V-16V input range), and to the Driver Station laptop over USB or ethernet via the radio.
+The RoboRIO is the main controller of the robot. It runs your team's code and communicates with all other components. Both the roboRIO 1 and roboRIO 2 are legal. The roboRIO 2 is preferred due to better performance and more storage.
 
 - Power the RoboRIO through its power input terminals using a dedicated PDH channel with a 10A breaker.
-- The RoboRIO connects to the network switch or radio via ethernet.
+- The RoboRIO connects to the radio via ethernet using the port labeled "RIO" on the VH-109.
 - The RoboRIO is on the CAN bus as the bus master.
 - PWM headers on the RoboRIO can control motor controllers that do not use CAN.
 
 ### Radio
 
-The radio (OpenMesh OM5P-AN or OM5P-AC) handles communication between the robot and the Driver Station. It must be powered through the VRM, not directly from the PDH.
+The radio for FRC is the Vivid-Hosting VH-109. It handles communication between the robot and the Driver Station over Wi-Fi 6E (6 GHz). The radio is powered directly from the PDH, not through a VRM.
 
-- Power the radio using the 12V/2A output on the VRM.
-- Connect the radio to the RoboRIO using an ethernet cable.
-- The radio must be configured each year using the FRC Radio Configuration Utility before the robot can communicate.
+- Power the radio using a 10A breaker channel on the PDH, wired to the Weidmuller DC input on the VH-109.
+- Connect the RoboRIO to the port labeled "RIO" on the VH-109 using an ethernet cable.
+- The radio must be configured at a FIRST event using the Radio Kiosk, or at home using the Vivid-Hosting web interface.
+- The radio must be updated to the latest firmware before use at official events.
 - Mount the radio so its indicator lights are visible.
 
-### Voltage Regulator Module (VRM)
-
-The VRM provides stable 12V and 5V power outputs for low-power devices like the radio, cameras, and sensors. It is powered from the PDH.
-
-- Use the 12V/2A port to power the radio.
-- Use the 5V/500mA ports for sensors or other low-power devices.
-- Do not exceed the rated current on each output.
+> **Note:** At home for practice, you need a second VH-109 acting as an access point to connect your Driver Station laptop to the robot radio. The access point radio must be powered from a wall adapter, not a battery.
 
 ### Motor Controllers
 
@@ -92,20 +87,23 @@ Motor controllers sit between the PDH and the motors. They take a power input fr
 
 Common motor controllers used in FRC:
 
-| Controller | Communication | Notes |
+| Controller | Communication | Common Motors |
 |---|---|---|
-| Talon FX (built into Falcon 500) | CAN | Integrated into the motor itself |
-| Talon SRX | CAN or PWM | Used with CIM, Mini-CIM motors |
-| SPARK MAX | CAN or PWM | Used with NEO, NEO 550 motors |
-| Victor SPX | CAN or PWM | Budget option for lower-load mechanisms |
+| Talon FX (inside Falcon 500 / Kraken X60) | CAN | Falcon 500, Kraken X60 (integrated) |
+| Talon FXS | CAN | Minion, other brushless/brushed motors |
+| SPARK MAX | CAN or PWM | NEO, NEO 550 |
+| SPARK Flex | CAN or PWM | NEO Vortex |
+| Thrifty Nova | CAN or USB | NEO, other brushless motors |
+| Talon SRX | CAN or PWM | CIM, Mini-CIM, brushed motors |
+| Victor SPX | CAN or PWM | Brushed motors (legacy use) |
 
 **Wiring a motor controller:**
-1. Connect the controller's power input (red/black) to a PDH channel with the correct breaker.
+1. Connect the controller power input (red/black) to a PDH channel with the correct breaker.
 2. Connect the motor output wires to the motor.
 3. If using CAN, daisy-chain the CAN wires through the controller.
 4. If using PWM, connect a PWM cable from the controller to a PWM header on the RoboRIO.
 
-> **Important:** Each motor controller must have a unique CAN ID set using a configuration tool (REV Hardware Client for SPARK MAX, Phoenix Tuner for CTRE devices). Duplicate IDs will cause unpredictable behavior.
+> **Important:** Each motor controller must have a unique CAN ID set using a configuration tool (REV Hardware Client for SPARK MAX and SPARK Flex, Phoenix Tuner X for CTRE devices). Duplicate IDs will cause unpredictable behavior.
 
 ---
 
@@ -129,11 +127,11 @@ In wire sizing, a smaller AWG number means a thicker wire that can carry more cu
 
 ## CAN Bus
 
-CAN (Controller Area Network) bus is a two-wire communication network that connects the RoboRIO to smart devices like motor controllers, the PDH, and pneumatic hubs. It uses a yellow wire (CAN High) and a green wire (CAN Low).
+CAN (Controller Area Network) bus is a two-wire communication network that connects the RoboRIO to smart devices like motor controllers and the PDH. It uses a yellow wire (CAN High) and a green wire (CAN Low).
 
 ### How CAN Bus is Wired
 
-CAN devices are wired in a daisy-chain from the RoboRIO out to the last device, which must be terminated. The PDH has a built-in CAN terminator on one end of the chain.
+CAN devices are wired in a daisy-chain from the RoboRIO out to the last device, which must be terminated. The PDH has a built-in CAN terminator.
 
 ```
 RoboRIO --> Device 1 --> Device 2 --> ... --> PDH (termination)
@@ -146,10 +144,10 @@ RoboRIO --> Device 1 --> Device 2 --> ... --> PDH (termination)
 
 ### CAN IDs
 
-Every device on the CAN bus needs a unique ID number. The PDH and PCM/PH have default IDs (usually 1). Motor controllers default to ID 1, so you must change them before putting multiple controllers on the bus.
+Every device on the CAN bus needs a unique ID number. Motor controllers default to ID 0 or 1, so you must change them before putting multiple controllers on the bus.
 
-- Use REV Hardware Client to set CAN IDs on SPARK MAX controllers.
-- Use Phoenix Tuner X to set CAN IDs on CTRE devices (Talon FX, Talon SRX, Victor SPX).
+- Use REV Hardware Client to set CAN IDs on SPARK MAX and SPARK Flex controllers.
+- Use Phoenix Tuner X to set CAN IDs on CTRE devices (Talon FX, Talon FXS, Talon SRX, Victor SPX).
 - Keep a written or digital record of which ID is assigned to which mechanism.
 
 ### Checking CAN Bus Health
@@ -180,13 +178,12 @@ Poor cable management causes problems during matches. Loose wires can get caught
 | Connector | Used For |
 |---|---|
 | Anderson SB50 | Battery leads |
-| Anderson Powerpole | PDH channel outputs, motor power |
-| Wago lever nuts | PDH power terminals |
-| XT30 / XT60 | Some custom power runs |
+| Wago lever nuts | PDH power input terminals |
+| Weidmuller push-in | PDH channel outputs, radio power input |
 | JST | Sensors, encoders, small signal wires |
-| RJ45 (ethernet) | Radio to RoboRIO, network switch |
+| RJ45 (ethernet) | Radio to RoboRIO |
 
-Always crimp connectors properly. A poorly crimped connection has high resistance, which causes voltage drop and heat.
+Always make sure connections are fully seated and secure. A loose connection has high resistance, which causes voltage drop and heat.
 
 ### Protecting Wires
 
@@ -200,10 +197,10 @@ Always crimp connectors properly. A poorly crimped connection has high resistanc
 
 When wiring a new robot, work in this order to stay organized:
 
-1. Mount the PDH, RoboRIO, VRM, and main breaker to the robot.
+1. Mount the PDH, RoboRIO, and main breaker to the robot.
 2. Run and connect the main power cables (battery, main breaker, PDH).
 3. Wire the RoboRIO power from the PDH.
-4. Wire the VRM from the PDH and connect the radio power.
+4. Wire the radio power directly from a PDH channel.
 5. Connect the RoboRIO to the radio with an ethernet cable.
 6. Wire each motor controller to the PDH and to its motor.
 7. Run the CAN bus chain through all devices.
@@ -241,3 +238,5 @@ Before every match or test session, verify the following:
 **Wires too short:** Wires that are pulled tight will break at the connector over time. Leave a small amount of slack in every run.
 
 **No wire labels:** Unlabeled wiring makes debugging very slow. Label every wire at both ends.
+
+**Wrong radio ethernet port:** The RoboRIO must connect to the port labeled "RIO" on the VH-109. Using the wrong port can damage connected devices.
