@@ -22,4 +22,13 @@ kA - a constant representing the voltage required to induce an acceleration
 
 θ - an angle that determines the effect of gravity on the system -> measured from the location which the force of gravity is the greatest (parrallel to the ground) since \\(cos(0) = 1\\) 
 
-For most of our purposes, we usually ignore kA since we usually are controlling the velocity
+-> This would be an example θ for an arm but for a different system like an elevator you wouldn't need to include the θ since gravity is always having the same effect on the system. 
+
+For most of our purposes, we usually ignore kA since we usually are controlling the velocity but in a scenario in which we needed to control the acelleration we would use that constant. These constants are not always used and in some situations we use more. [^1] We will now dive in depth into these specific constants, how to tune them, and when they will be used. 
+
+# \\(k_S\\)
+
+woah lemme check to se if this works rq
+
+
+[^1]: See page on (uncommon constants)[../theory/uncommon_constants.md]
