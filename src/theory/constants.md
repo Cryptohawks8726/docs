@@ -4,7 +4,7 @@
 
 You are probably reading this now and wondering what the heck this means in this application. Remember how earlier we said that feedforeward is a mathematical model which represents a system and is different for every system? Well that was mostly true but for our situations, we can use a generic equation for all feedforeward systems and simply change some of the numbers (constants) and tune the model for specific systems. The basic equation that we use is: 
 
-\\[ V = k_S \times sgn(v) \plus k_V \times v \plus k_A \times a \plus k_G cos(θ)\\]
+\\[ V = k_S \times sgn(v) + k_V \times v + k_A \times a + k_G cos(θ)\\]
 
 In this equation, 
 V = voltage (output of the equation, send to motors)
