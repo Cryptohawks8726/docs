@@ -53,6 +53,18 @@ You will use \\(k_S\\) is mostly all of your systems. It functions to reduce the
 
 \\(k_V\\)
 
+## \\(k_A\\)
+
+\\(k_A\\) 
+
+### When to use \\(k_A\\)
+
+\\(k_A\\)
+
+### Tuning \\(k_A\\)
+
+\\(k_A\\)
+
 ## \\(k_G\\)
 
 \\(k_G\\) 
