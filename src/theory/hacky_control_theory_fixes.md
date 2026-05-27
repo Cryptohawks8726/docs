@@ -1,16 +1,16 @@
 (Needs proofreading! Written by: Keshav)
 
-# Previous Unorthodox Control Fixes 
+# Previous Unorthodox Control Fixes
 
 Obviously when working on an FRC team, not all the solutions that we have are "clean" or "regular" but there is a lot that can be learnt and this is documented so when potentially similar problems in the future, we can look back into the past and see how the team has handled them. Some of these solutions are also really funny and are being documented just to remember and look back at the times we made such wonky solutions that some how just worked. The goal is to keep this updated as we continue as a FRC team and solve more problems with our control systems.
 
 ## FRC 2026: Rebuilt
 
-### The \\(k_Spring\\) Incident
+### The \\(k\_{spring}\\) Incident
 
 #### Background Info and The Problem
 
-Our 2026 Robot, LeJohn James, had a turret. Originally for wiring the turret, we planned on having an e-chain which would have the wires inside of it and would be wrapped inside the turret. After 3d-printing 2 potential e-chain solutions, we realized that it really wasn't working due to some mechanical constraints. In order to successfully have a turret, we would have to have an e-snake on a different board which was attached to a very very strong spring because we didn't have any flexable wires and a weaker spring wasn't able to provide the tension we needed to rotate in both directions. This spring moved our turret irregularly due to its strength so in order to counter its effect on our system, we created the feedforward constant: \\(k_Spring\\). 
+Our 2026 Robot, LeJohn James, had a turret. Originally for wiring the turret, we planned on having an e-chain which would have the wires inside of it and would be wrapped inside the turret. After 3d-printing 2 potential e-chain solutions, we realized that it really wasn't working due to some mechanical constraints. In order to successfully have a turret, we would have to have an e-snake on a different board which was attached to a very very strong spring because we didn't have any flexable wires and a weaker spring wasn't able to provide the tension we needed to rotate in both directions. This spring moved our turret irregularly due to its strength so in order to counter its effect on our system, we created the feedforward constant: \\(k\_{spring}\\).
 
 #### The Solution, How it Worked, & Learnings
 
