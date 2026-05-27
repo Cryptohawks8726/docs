@@ -41,5 +41,29 @@ You will use \\(k_S\\) is mostly all of your systems. It functions to reduce the
 
 \\(k_S\\) is probably the easiest constant to tune on this list. Start by applying a very low voltage to the system using the [motor tester](../projects/motortester.md) on [aluminum](../projects/aluminum.md)'s debug page. If the voltage you applied makes the system move, decrease the voltage. If it does not make the system move, increase the voltage. Repeat this process until you have a number with 2 decimal digits such that it itself does not cause the system to move but adding 0.01 to the number will cause the system to move. In this scenario, 2 is an arbitrary number and heavily relies on the neccessary accuracy of the system. If your mechanism can't handle being 0.01 volts off then (to put it the gen Z way) you're fried. This number can now be used as the \\(k_S\\) in the equation and you can move on to tuning other constants. 
 
+## \\(k_V\\)
 
-[^1]: See [page on uncommon constants](../theory/uncommon_constants.md)
+\\(k_V\\) 
+
+### When to use \\(k_V\\)
+
+\\(k_V\\)
+
+### Tuning \\(k_V\\)
+
+\\(k_V\\)
+
+## \\(k_G\\)
+
+\\(k_G\\) 
+
+### When to use \\(k_G\\)
+
+\\(k_G\\)
+
+### Tuning \\(k_G\\)
+
+\\(k_G\\)
+
+
+[^1]: See [page on unorthadox control fixes](../theory/hacky_control_theory_fixes.md)
