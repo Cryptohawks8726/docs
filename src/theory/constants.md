@@ -31,4 +31,4 @@ For most of our purposes, we usually ignore kA since we usually are controlling 
 woah lemme check to se if this works rq
 
 
-[^1]: See page on (uncommon constants)[../theory/uncommon_constants.md]
+[^1]: See page on [uncommon constants](../theory/uncommon_constants.md)
