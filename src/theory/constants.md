@@ -1,6 +1,8 @@
 (Needs proofreading! Written by: Keshav)
 
-## Constants- What they are and why they matter
+# Constants
+
+## What they are and why they matter
 
 You are probably reading this now and wondering what the heck this means in this application. Remember how earlier we said that feedforeward is a mathematical model which represents a system and is different for every system? Well that was mostly true but for our situations, we can use a generic equation for all feedforeward systems and simply change some of the numbers (constants) and tune the model for specific systems. The basic equation that we use is: 
 
