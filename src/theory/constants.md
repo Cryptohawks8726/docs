@@ -7,12 +7,19 @@ You are probably reading this now and wondering what the heck this means in this
 \\[ V = k_S \times sgn(v) + k_V \times v + k_A \times a + k_G cos(θ)\\]
 
 In this equation, 
+
 V = voltage (output of the equation, send to motors)
+
 a - the desired acceleration (an input to the equation)
+
 v - the desired velocity (an input to the equation)
+
 kS - a constant representing the voltage required to overcome static friction
+
 kV - a constant representing the voltage required to coast at a velocity
+
 kA - a constant representing the voltage required to induce an acceleration
+
 θ - an angle that determines the effect of gravity on the system -> measured from the location which the force of gravity is the greatest (parrallel to the ground) since \\(cos(0) = 1\\) 
 
 For most of our purposes, we usually ignore kA since we usually are controlling the velocity
