@@ -28,7 +28,7 @@ The 12V Battery is what supplies power to the robot. It is connected to the PDH 
 
 
 ## System Core and RoboRio
-<img src="../images/systemcore.png" alt="Image of SystemCore" width="250" height="250">
+<img src="../images/systemcore.png" alt="Image of SystemCore" width="463" height="250">
 <img src="../images/roborio.png" alt="Image of NI RoborRio" width="200" height="200">
 
 The Systemcore and RoboRio are the brains of the robot. They are what connect to the radio and the CanBus to communicate the robot code to each component. The RoboRio has been used until the 2027 FRC season, where is is being replaced by the SystemCore. The two units can be used for Pulse Width Modulation (PWM) on older motor controllers and servos. They are also used as terminators for the CAN bus, alongside the PDH.
