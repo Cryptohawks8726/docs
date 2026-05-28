@@ -2,7 +2,7 @@
 # Wagos
 
 ![small wago](../images/HowshyokneeHowshyoknee.jpg)
-![big wago](../images/BigWaggo.jpg)
+![big wago](../images/BigWago.jpg)
 
 This part can be found in the Mechroom inside the electrical bin.
 
