@@ -41,6 +41,7 @@
   - [SwerveBase](projects/swervebase.md)
   - [MotorTester](projects/motortester.md)
 - [Autonomous Guide](autonomous/core_tools.md)
+  - [Choreo Guide](autonomous/choreo_guide.md)
 - [Electrical Guide](electrical/electrical.md)
   - [Core Component Review](electrical/core_components_review.md)
   - [The Can Bus](electrical/can_bus.md)
