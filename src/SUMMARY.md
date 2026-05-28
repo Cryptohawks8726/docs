@@ -40,6 +40,7 @@
     - [How to Make Common Changes](projects/aluminum/how_tos.md)
   - [SwerveBase](projects/swervebase.md)
   - [MotorTester](projects/motortester.md)
+- [Autonomous Guide]()
 - [Electrical Guide](electrical/electrical.md)
   - [Core Component Review](electrical/core_components_review.md)
   - [The Can Bus](electrical/can_bus.md)
