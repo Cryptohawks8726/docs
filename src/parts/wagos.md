@@ -1,7 +1,8 @@
+- ismail, not proofread
 # Wagos
 
-![small wago](HowshyokneeHowshyoknee.jpg)
-![small wago](BigWago.jpg)
+![small wago](../images/HowshyokneeHowshyoknee.jpg)
+![big wago](../images/BigWaggo.jpg)
 
 This part can be found in the Mechroom inside the electrical bin.
 
@@ -13,10 +14,10 @@ WAGOs are wire connectors that allow wires to splice together without the need t
 
 ## Common issues
 
-The following are some common issues that may arise when uing WAGOs, along with some solutions.
+The following are some common issues that may arise when using WAGOs, along with some solutions.
 
 | Problem         | Solution   |
 | ------------ | ----------- |
-| Wires coming off easily with little force. | Ensure that the wire is stripped enough, restrip the wire if need be. |
-| Connection not working or wires not being powered  | Make sure that wire is not frayed to missing strips. You may need to either restrip the wire or use a different wire entirely.   |
-| Wires don't fit  | Make sure that the WAGO being used has the correct gauge. Restrip the wire if it is not stripped properly.  |
+| Wires come off easily with little force. | Ensure that the wire is stripped enough, restrip the wire if need be. |
+| Connection not working or wires not being powered  | Make sure that the wire is not frayed or missing strips. You may need to either restrip the wire or use a different one entirely.   |
+| Wires don't fit  | Make sure that the WAGO being used is of the correct gauge. Restrip the wire if it is not stripped properly.  |
