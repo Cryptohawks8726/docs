@@ -21,7 +21,7 @@ The Power Distribution Hub (PDH) is a central component that connects to the bat
 
 
 ## The Battery and Breaker
-![Image of a 12V Robot Battery](../images/robot-battery.png)
-![Image of a 120A Breaker](../images/120a-breaker.png)
+<img src="../images/robot-battery.png" alt="Image of 12V Robot Battery" width="200" height ="200">
+<img src="../images/120a-breaker.png" alt="Image of 120A  Breaker" width="200" height ="200">
 
 The 12V Battery is what supplies power to the robot. It is connected to the PDH using 6 AWG lugs and the 120A breaker. Our batteries have [SB50 connectors](https://www.andersonpower.com/product-lines/sb-connector-series/), which are used for easy connection to the robot. The negative/ground output from the SB50 connects directly to the PDH/PDP using a 6 AWG lug. The positive output from the SB50 connects to one end of the breaker, and the other end of breaker connects to the positive end of the PDH/PDP. This allows the breaker to open or close the circuit of power, providing a way to switch the power on or off. 
