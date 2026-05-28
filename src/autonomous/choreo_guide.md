@@ -1,1 +1,1 @@
-![alt text](C:\Users\urban\Repositories\docs\src\Pictures\test.png)
+![alt text](../images/test.png)
