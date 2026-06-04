@@ -1,4 +1,4 @@
-# Common Wiring Mistakes
+# Common Mistakes
 
 Every electrical team makes mistakes, especially early in build season. This page documents the most common wiring errors seen in FRC robots, explains why they happen, and tells you how to avoid or fix them.
 
@@ -13,6 +13,7 @@ Every electrical team makes mistakes, especially early in build season. This pag
 **What happens:** Reversed polarity on motor controllers can destroy them instantly. Some controllers have protection against this, but many do not. On motors, reversed polarity causes the motor to spin backwards — which may not be immediately obvious and can cause mechanical damage if a mechanism is driven in the wrong direction.
 
 **How to avoid it:**
+
 - Always use red for positive and black for negative on power wires. Do not improvise.
 - Double-check polarity before connecting any power cable.
 - Use a multimeter to verify polarity at both ends of a run before connecting.
@@ -29,6 +30,7 @@ Every electrical team makes mistakes, especially early in build season. This pag
 **What happens:** A breaker that is too large will not trip when it should, meaning the wire it protects can overheat and potentially start a fire before the breaker responds. A breaker that is too small will trip repeatedly during normal operation, causing unexpected robot shutdowns during matches.
 
 **How to avoid it:**
+
 - Refer to the [Wire Gauges](wire_gauges.md) page and the FRC game manual for correct breaker sizes.
 - Do not substitute breaker sizes based on what you have in stock. Order the correct size.
 - Label each PDH channel with the breaker size and what it powers.
@@ -44,6 +46,7 @@ Every electrical team makes mistakes, especially early in build season. This pag
 **What happens:** Devices with duplicate IDs will conflict on the bus. One or both devices may stop responding, behave erratically, or cause CAN bus errors that affect all other devices on the bus. This is one of the most common causes of mysterious motor failures at competition.
 
 **How to avoid it:**
+
 - Set CAN IDs **before** connecting a new device to the CAN bus. Configure it alone first.
 - Use REV Hardware Client for SPARK MAX and SPARK Flex.
 - Use Phoenix Tuner X for CTRE devices (Talon FX, Talon FXS, Talon SRX, Victor SPX).
@@ -61,6 +64,7 @@ Every electrical team makes mistakes, especially early in build season. This pag
 **What happens:** An unsecured connector can pull free during a match, cutting power or communication to a motor or the RoboRIO. This often looks like a random failure with no obvious cause.
 
 **How to avoid it:**
+
 - Zip-tie connectors together or anchor them to the frame so they cannot separate.
 - For Weidmuller push-in connectors, give every wire a firm tug after insertion to confirm it is locked.
 - For Anderson SB50 battery connectors, inspect the spring contact inside for proper tension.
@@ -77,6 +81,7 @@ Every electrical team makes mistakes, especially early in build season. This pag
 **What happens:** A wire under constant tension will eventually fatigue and break at the connector crimp or terminal. This usually happens during or just before a match and can be very difficult to diagnose because the break may not be visible.
 
 **How to avoid it:**
+
 - Always leave 2-3 inches of slack at each end of every wire run.
 - Before finalizing wire routes, move the robot through its full range of motion and verify that no wire becomes tight.
 - Pay special attention to wires that cross between the robot frame and a moving mechanism (like a rotating arm or elevator).
@@ -92,6 +97,7 @@ Every electrical team makes mistakes, especially early in build season. This pag
 **What happens:** When a problem occurs (and problems always occur), unlabeled wiring makes debugging dramatically slower. At a competition with limited time between matches, spending 20 minutes tracing a wire can cost you a match.
 
 **How to avoid it:**
+
 - Make labeling a required part of the wiring process. Do not consider a wire finished until it is labeled at both ends.
 - Use a consistent naming convention so labels are immediately meaningful (e.g., `LEFT_REAR_DRIVE_+`, `CAN_TO_PDH_H`).
 - Even simple color-coded tape on bundles helps when the full label is not readable at a glance.
@@ -107,6 +113,7 @@ Every electrical team makes mistakes, especially early in build season. This pag
 **What happens:** Using the wrong port will prevent robot communication. In some cases it can also damage the connected device. The robot will appear to have no communication even though the radio is powered and the ethernet cable is connected.
 
 **How to avoid it:**
+
 - Always connect to the port labeled **"RIO"** on the VH-109.
 - Mark the correct port with a small piece of colored tape after initial setup so it is always obvious which port to use.
 
@@ -121,6 +128,7 @@ Every electrical team makes mistakes, especially early in build season. This pag
 **What happens:** The mechanism catches the wire, either ripping it out at the connector, cutting through the insulation, or breaking the wire. This can cause a sudden loss of power or a short circuit.
 
 **How to avoid it:**
+
 - Run the robot through its full range of motion before finalizing wire routes.
 - Use flexible wire (stranded, not solid core) for any run that must cross near a moving mechanism.
 - When a wire must pass near a moving part, use split loom to protect it and secure it so it cannot be pulled into the mechanism.
