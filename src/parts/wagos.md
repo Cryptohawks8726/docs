@@ -3,7 +3,6 @@
 
 <img src="../images/HowshyokneeHowshyoknee.jpg" alt="Small WAGO" width="500" height="auto">
 <img src="../images/BigWago.jpg" alt="Big WAGO" width="500" height="auto">
-`Ani's WAGOs`
 
 This part can be found in the Mechroom inside the electrical bin.
 
