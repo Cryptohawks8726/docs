@@ -1,1 +1,3 @@
 # Interfacing with Physical Devices
+
+In robotics, our primary goal for programming is to control the robot (duh?). In order to control robots, we need to interface with a varity of physical hardware including motors and sensors which we purchase from a variety of vendors. Each vendor usually has their own dependencies in order to interface with their motors. In this section, we will talk about some of the most commonly used devices and how to interface with them from a programming perspective. The goal is to keep this section updated as our team changes if we choose to primarily use different types of motors or new sensors.  
