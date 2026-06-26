@@ -22,7 +22,7 @@ Our batteries use [SB50 connectors](https://www.andersonpower.com/product-lines/
 - Label batteries with a marker so you know which are charged and which are discharged.
 - Never leave a battery fully discharged for an extended period — this permanently reduces capacity.
 - Check battery voltage before every match. A battery below 12.0V at rest is considered low.
-- Carry at least two charged batteries to every competition event.
+- Carry multiple batteries to every competition event and make sure you check their status and age. Take the good ones to competitions. 
 
 ---
 
@@ -70,7 +70,7 @@ The PDH has a **built-in CAN terminator**, which means it must be placed at the 
 
 ---
 
-## RoboRIO (System Core)
+## RoboRIO & System Core
 
 <img src="../images/systemcore.png" alt="Image of SystemCore" width="463" height="250">
 <img src="../images/roborio.png" alt="Image of NI RoboRio" width="200" height="200">
@@ -100,8 +100,9 @@ The radio for FRC is the **Vivid-Hosting VH-109**. It handles Wi-Fi 6E (6 GHz) c
 - Mount the radio so its indicator lights are visible. This lets you quickly check connection status from the pit.
 
 **Radio rules:**
-- The radio must be updated to the latest firmware before use at official events.
+- The radio must be updated to the latest firmware before use at official events. 
 - At home practice, you need a **second VH-109** acting as an access point to connect the Driver Station laptop to the robot radio. The access point radio must be powered from a wall adapter, not a battery.
+- This connection can also be replaced by connecting to the radio's wifi signal as that has the same effect. Usually 8726 doesn't use a second radio for at home practice but that is an option. 
 - Do not enclose the radio in metal, as it will block the Wi-Fi signal.
 
 ---
