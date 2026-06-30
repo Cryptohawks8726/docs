@@ -10,7 +10,6 @@ Every FRC robot uses the same set of core electrical components. Understanding w
 ## Battery
 
 <img src="../images/robot-battery.png" alt="Image of 12V Robot Battery" width="200" height ="200">
-<img src="../images/120a-breaker.png" alt="Image of 120A  Breaker" width="200" height ="200">
 
 The battery is the only power source for the robot. FRC requires a specific battery type: **18 Ah, 12V sealed lead-acid**. All robot power flows from this battery through the main breaker and into the PDH.
 
@@ -27,6 +26,8 @@ Our batteries use [SB50 connectors](https://www.andersonpower.com/product-lines/
 ---
 
 ## Main Breaker
+
+<img src="../images/120a-breaker.png" alt="Image of 120A  Breaker" width="200" height ="200">
 
 The main breaker is a **120A circuit breaker** that acts as the robot’s master power switch. It sits between the battery positive terminal and the PDH positive input. Pressing the red button instantly cuts all power to the robot.
 
@@ -92,6 +93,8 @@ The RoboRIO (and its successor, the SystemCore) is the **main controller** of th
 
 ## Radio (VH-109)
 
+<img src="../images/radio.png" alt="Image of VH-109 Radio" width="200" height ="200">
+
 The radio for FRC is the **Vivid-Hosting VH-109**. It handles Wi-Fi 6E (6 GHz) communication between the robot and the Driver Station laptop. The radio must be configured at a FIRST event using the Radio Kiosk before the robot can connect to the field.
 
 **Wiring the radio:**
@@ -108,6 +111,8 @@ The radio for FRC is the **Vivid-Hosting VH-109**. It handles Wi-Fi 6E (6 GHz) c
 ---
 
 ## Motor Controllers
+
+<img src="../images/sparkmax.png" alt="Image of Sparkmax/Example Motor Controller" width="200" height ="200">
 
 Motor controllers sit between the PDH and the motors. They receive a power input from the PDH and control how much power goes to the motor based on commands from the RoboRIO.
 
@@ -134,6 +139,8 @@ Motor controllers sit between the PDH and the motors. They receive a power input
 ---
 
 ## VRM (Voltage Regulator Module)
+
+<img src="../images/vrm.png" alt="Image of VRM" width="200" height ="200">
 
 The VRM is a legacy component that provided regulated 12V and 5V outputs for cameras, sensors, and radios in older FRC setups. In current FRC configurations with the VH-109 radio, the VRM is **not used for radio power**.
 
