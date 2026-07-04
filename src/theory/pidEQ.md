@@ -2,17 +2,14 @@
 
 # The Equation
 
-![The PID Equation](../images/pidEQ.png)
-
 ## Understanding the Equation
 
 Now that we understand what a PID controller is and why it exists, we can begin looking at the mathematics behind it. While the PID equation may initially appear intimidating, it is actually composed of three very simple ideas that work together to produce an effective controller. Each term represents a different way of looking at the same quantity: the error.
 
 The complete PID equation is
 
-\[
-u(t)=k_Pe(t)+k_I\int e(t)\,dt+k_D\frac{de(t)}{dt}
-\]
+
+![The PID Equation](../images/pidEQ.png)
 
 where
 
