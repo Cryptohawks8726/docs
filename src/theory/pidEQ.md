@@ -13,11 +13,11 @@ The complete PID equation is
 
 where
 
-- \(u(t)\) is the output of the controller
-- \(e(t)\) is the current error
-- \(k_P\) is the proportional gain
-- \(k_I\) is the integral gain
-- \(k_D\) is the derivative gain
+- \\(u(t)\\) is the output of the controller
+- \\(e(t)\\) is the current error
+- \\(k_P\\) is the proportional gain
+- \\(k_I\\) is the integral gain
+- \\(k_D\\) is the derivative gain
 
 The output of this equation is then sent to the motors. Depending on the implementation, this output may represent a voltage, a percent output, a torque request, or some other control signal. In FRC, the output is often interpreted as a voltage which is then combined with feedforward before being applied to the motors.
 
@@ -37,25 +37,25 @@ Every calculation performed by a PID controller begins with one value known as t
 
 The error is simply the difference between where the mechanism currently is and where we want it to be.
 
-\[
+\\[
 e(t)=\text{Setpoint}-\text{Measurement}
-\]
+\\]
 
-Suppose we want our arm to rotate to \(90^\circ\).
+Suppose we want our arm to rotate to \\(90^\circ\\).
 
-If the arm is currently at \(60^\circ\),
+If the arm is currently at \\(60^\circ\\),
 
-\[
+\\[
 e=90-60=30^\circ
-\]
+\\]
 
-The controller now knows that it still needs to move another \(30^\circ\).
+The controller now knows that it still needs to move another \\(30^\circ\\).
 
-Now suppose the arm overshoots and reaches \(95^\circ\).
+Now suppose the arm overshoots and reaches \\(95^\circ\\).
 
-\[
+\\[
 e=90-95=-5^\circ
-\]
+\\]
 
 Notice that the error is now negative. This tells the controller that the mechanism has traveled too far and must move in the opposite direction.
 
@@ -71,9 +71,9 @@ The proportional term is by far the simplest part of the PID controller and is o
 
 The proportional term is
 
-\[
+\\[
 k_Pe(t)
-\]
+\\]
 
 This equation simply states that the output of the controller should be proportional to the current error.
 
@@ -85,49 +85,49 @@ In mathematics, two quantities are said to be directly proportional if increasin
 
 For example,
 
-\[
+\\[
 y=5x
-\]
+\\]
 
 is a proportional relationship.
 
-If \(x\) doubles, then \(y\) also doubles.
+If \\(x\\) doubles, then \\(y\\) also doubles.
 
-If \(x\) becomes three times larger, then \(y\) also becomes three times larger.
+If \\(x\\) becomes three times larger, then \\(y\\) also becomes three times larger.
 
 The proportional term behaves exactly the same way.
 
 Suppose our proportional gain is
 
-\[
+\\[
 k_P=0.2
-\]
+\\]
 
 If the current error is
 
-\[
+\\[
 e=10
-\]
+\\]
 
 then the controller produces
 
-\[
+\\[
 0.2\times10=2
-\]
+\\]
 
 units of output.
 
 If the error suddenly doubles,
 
-\[
+\\[
 e=20
-\]
+\\]
 
 then the output also doubles.
 
-\[
+\\[
 0.2\times20=4
-\]
+\\]
 
 Nothing about the controller changes. The only thing that changed was the size of the error.
 
@@ -205,15 +205,15 @@ Finding a good proportional gain is therefore a balance between responsiveness a
 
 Despite these limitations, the proportional term usually contributes the largest portion of the controller's output and should almost always be tuned before the other two gains.
 
-# \(k_I\)
+# \\(k_I\\)
 
 The integral term is often considered the most difficult part of a PID controller because it introduces a concept from calculus. Fortunately, understanding the idea behind the integral is much more important than understanding the mathematics used to derive it.
 
 The integral term is
 
-\[
+\\[
 k_I\int e(t)\,dt
-\]
+\\]
 
 Unlike the proportional term, which only considers the current error, the integral term considers **every error that has occurred since the controller began running**. Rather than asking *"How large is the error right now?"*, it asks *"How much total error has accumulated over time?"*
 
@@ -249,9 +249,9 @@ The integral performs this same idea continuously instead of only at discrete mo
 
 This continuous accumulation is written mathematically as
 
-\[
+\\[
 \int e(t)\,dt
-\]
+\\]
 
 Although the notation appears complicated, the underlying idea is simply keeping a running total of the error.
 
@@ -295,11 +295,11 @@ Real computers cannot do this.
 
 Instead, they periodically sample the system and approximate the integral by repeatedly adding small pieces together.
 
-If the controller executes every \(\Delta t\) seconds, the accumulated error can be approximated as
+If the controller executes every \\(\Delta t\\) seconds, the accumulated error can be approximated as
 
-\[
+\\[
 I_{\text{new}}=I_{\text{old}}+e\Delta t
-\]
+\\]
 
 Rather than computing the exact area underneath the error curve, the computer approximates that area using many very small rectangles.
 
@@ -315,9 +315,9 @@ The accumulated error itself is rarely used directly.
 
 Instead, it is multiplied by a constant known as the integral gain,
 
-\[
+\\[
 k_I.
-\]
+\\]
 
 This gain determines how strongly the accumulated error influences the controller's output.
 
@@ -349,15 +349,15 @@ This phenomenon is known as **integral windup** because the accumulated error co
 
 Modern PID implementations often include anti-windup techniques that prevent the accumulated error from becoming excessively large. Although these methods vary, they all attempt to limit the controller's memory so that it remains useful without becoming unstable.
 
-# \(k_D\)
+# \\(k_D\\)
 
 The derivative term is the final component of a PID controller and is often the most misunderstood. Unlike the proportional term, which measures the current error, and the integral term, which measures the accumulated error, the derivative term measures **how quickly the error is changing**.
 
 The derivative term is
 
-\[
+\\[
 k_D\frac{de(t)}{dt}
-\]
+\\]
 
 Rather than asking *"How far away am I?"* or *"How long have I been away?"*, the derivative term asks
 
@@ -373,15 +373,15 @@ If you have studied calculus before, you may recognize the derivative as the slo
 
 Suppose we have a function
 
-\[
+\\[
 f(x)
-\]
+\\]
 
 The derivative
 
-\[
+\\[
 \frac{df}{dx}
-\]
+\\]
 
 describes how quickly the function changes with respect to its input.
 
@@ -391,17 +391,17 @@ The car's position changes over time.
 
 If we differentiate its position,
 
-\[
+\\[
 \frac{dx}{dt},
-\]
+\\]
 
 we obtain its velocity.
 
 Differentiating once again,
 
-\[
+\\[
 \frac{d^2x}{dt^2},
-\]
+\\]
 
 gives its acceleration.
 
@@ -411,9 +411,9 @@ PID applies this exact same idea to the error.
 
 Instead of differentiating position or velocity, it differentiates
 
-\[
+\\[
 e(t).
-\]
+\\]
 
 The resulting quantity tells us how quickly the error itself is changing.
 
@@ -473,9 +473,9 @@ This naturally reduces oscillation and allows the system to settle more quickly.
 
 The mathematical definition of the derivative is
 
-\[
+\\[
 \frac{de(t)}{dt},
-\]
+\\]
 
 which assumes that the error can be measured continuously.
 
@@ -485,15 +485,15 @@ Instead, computers approximate the derivative using the change in error between 
 
 This approximation is
 
-\[
+\\[
 \frac{e_{\text{current}}-e_{\text{previous}}}{\Delta t}
-\]
+\\]
 
 where
 
-- \(e_{\text{current}}\) is the current error,
-- \(e_{\text{previous}}\) is the previous error,
-- and \(\Delta t\) is the elapsed time between measurements.
+- \\(e_{\text{current}}\\) is the current error,
+- \\(e_{\text{previous}}\\) is the previous error,
+- and \\(\Delta t\\) is the elapsed time between measurements.
 
 This quantity is known as a **finite difference approximation** and is one of the most common methods of estimating derivatives numerically.
 
@@ -531,11 +531,11 @@ The derivative itself only measures how quickly the error changes.
 
 To determine how strongly this information should influence the controller, it is multiplied by the derivative gain,
 
-\[
+\\[
 k_D.
-\]
+\\]
 
-Increasing \(k_D\) causes the controller to react more strongly to rapid changes in the error.
+Increasing \\(k_D\\) causes the controller to react more strongly to rapid changes in the error.
 
 This generally reduces overshoot and oscillation while allowing the system to settle more quickly.
 
@@ -551,27 +551,27 @@ Each term of the PID controller examines the error from a different mathematical
 
 The proportional term considers the current error.
 
-\[
+\\[
 k_Pe(t)
-\]
+\\]
 
 The integral term considers the accumulated history of the error.
 
-\[
+\\[
 k_I\int e(t)\,dt
-\]
+\\]
 
 The derivative term considers the rate at which the error is changing.
 
-\[
+\\[
 k_D\frac{de(t)}{dt}
-\]
+\\]
 
 Together, these three terms produce the complete PID equation,
 
-\[
+\\[
 u(t)=k_Pe(t)+k_I\int e(t)\,dt+k_D\frac{de(t)}{dt}.
-\]
+\\]
 
 One way to summarize the equation is to think of each term as observing the error from a different point in time.
 
