@@ -1,5 +1,3 @@
-(Needs proofreading! Written by: Dhruva)
-(should anything else be included here?)
 
 # Programming Guide
 
