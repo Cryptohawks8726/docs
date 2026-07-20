@@ -1,2 +1,3 @@
-Todo: Keshav
+(Needs proofreading! Written by: Keshav)
+
 # Logging and Telemetry

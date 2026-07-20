@@ -67,7 +67,7 @@
   - [Programming Autos](programming/autos.md)
   - [Commands](programming/commands.md)
     - [Finite State Machines](programming/fsm.md)
-  - [Susbsytem Coding Guide](programming/subsystems.md)
+  - [Subsystem Coding Guide](programming/subsystems.md)
     - [Subsystem Checklist](programming/subsystem_checklist.md)
 - [Control Theory Guide](theory/theory.md)
   - [Introduction](theory/intro.md)
