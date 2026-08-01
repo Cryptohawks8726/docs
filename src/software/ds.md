@@ -24,15 +24,19 @@ The main control panel is shown above. In the top left we can see the connectivi
 
 
 
-<img src="../images/settingsp1.png" alt="Settings" width="500" height="auto">
+<img src="../images/SettingsP1.png" alt="Settings" width="500" height="auto">
 
 Above we can see the beginning part of the settings, we can see the Team Number (always keep this on 8726, unless you’re not 8726 :P). Keep the Window Mode to DOCKED as Aluminum (our team's custom Driver Dashboard) will fit to it. Use the Game Data value set to send data to our robot.
 
 
 
-<img src="../images/settingsp2.png" alt="Settings" width="500" height="auto">
+<img src="../images/SettingsP2.png" alt="Settings" width="500" height="auto">
+
 When we scroll down to this part, make sure that you reset the Robot Code anytime you update or pull code from GitHub. Then make sure that you always reset times to the FRC standard (because we are in FRC :D). Leave everything unchecked unless necessary or directed to do so.
 Official Resources
+
+
+## Resources
 
 Linked below are some resources to aid your journey, if more help is necessary, ask the Driver, Operator, or Technician. Have fun!
 
