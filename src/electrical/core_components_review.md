@@ -10,7 +10,6 @@ Every FRC robot uses the same set of core electrical components. Understanding w
 ## Battery
 
 <img src="../images/robot-battery.png" alt="Image of 12V Robot Battery" width="200" height ="200">
-<img src="../images/120a-breaker.png" alt="Image of 120A  Breaker" width="200" height ="200">
 
 The battery is the only power source for the robot. FRC requires a specific battery type: **18 Ah, 12V sealed lead-acid**. All robot power flows from this battery through the main breaker and into the PDH.
 
@@ -22,11 +21,13 @@ Our batteries use [SB50 connectors](https://www.andersonpower.com/product-lines/
 - Label batteries with a marker so you know which are charged and which are discharged.
 - Never leave a battery fully discharged for an extended period — this permanently reduces capacity.
 - Check battery voltage before every match. A battery below 12.0V at rest is considered low.
-- Carry at least two charged batteries to every competition event.
+- Carry multiple batteries to every competition event and make sure you check their status and age. Take the good ones to competitions. 
 
 ---
 
 ## Main Breaker
+
+<img src="../images/120a-breaker.png" alt="Image of 120A  Breaker" width="200" height ="200">
 
 The main breaker is a **120A circuit breaker** that acts as the robot’s master power switch. It sits between the battery positive terminal and the PDH positive input. Pressing the red button instantly cuts all power to the robot.
 
@@ -70,7 +71,7 @@ The PDH has a **built-in CAN terminator**, which means it must be placed at the 
 
 ---
 
-## RoboRIO (System Core)
+## RoboRIO & System Core
 
 <img src="../images/systemcore.png" alt="Image of SystemCore" width="463" height="250">
 <img src="../images/roborio.png" alt="Image of NI RoboRio" width="200" height="200">
@@ -92,6 +93,8 @@ The RoboRIO (and its successor, the SystemCore) is the **main controller** of th
 
 ## Radio (VH-109)
 
+<img src="../images/radio.png" alt="Image of VH-109 Radio" width="200" height ="200">
+
 The radio for FRC is the **Vivid-Hosting VH-109**. It handles Wi-Fi 6E (6 GHz) communication between the robot and the Driver Station laptop. The radio must be configured at a FIRST event using the Radio Kiosk before the robot can connect to the field.
 
 **Wiring the radio:**
@@ -100,13 +103,16 @@ The radio for FRC is the **Vivid-Hosting VH-109**. It handles Wi-Fi 6E (6 GHz) c
 - Mount the radio so its indicator lights are visible. This lets you quickly check connection status from the pit.
 
 **Radio rules:**
-- The radio must be updated to the latest firmware before use at official events.
+- The radio must be updated to the latest firmware before use at official events. 
 - At home practice, you need a **second VH-109** acting as an access point to connect the Driver Station laptop to the robot radio. The access point radio must be powered from a wall adapter, not a battery.
+- This connection can also be replaced by connecting to the radio's wifi signal as that has the same effect. Usually 8726 doesn't use a second radio for at home practice but that is an option. 
 - Do not enclose the radio in metal, as it will block the Wi-Fi signal.
 
 ---
 
 ## Motor Controllers
+
+<img src="../images/sparkmax.png" alt="Image of Sparkmax/Example Motor Controller" width="200" height ="200">
 
 Motor controllers sit between the PDH and the motors. They receive a power input from the PDH and control how much power goes to the motor based on commands from the RoboRIO.
 
@@ -133,6 +139,8 @@ Motor controllers sit between the PDH and the motors. They receive a power input
 ---
 
 ## VRM (Voltage Regulator Module)
+
+<img src="../images/vrm.png" alt="Image of VRM" width="200" height ="200">
 
 The VRM is a legacy component that provided regulated 12V and 5V outputs for cameras, sensors, and radios in older FRC setups. In current FRC configurations with the VH-109 radio, the VRM is **not used for radio power**.
 

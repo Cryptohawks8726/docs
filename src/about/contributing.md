@@ -1,5 +1,3 @@
-(Needs proofreading! Written by: Dhruva)
-
 # Contributing
 
 The GitHub repository containing all of the markdown files that make up this

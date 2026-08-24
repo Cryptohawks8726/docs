@@ -23,6 +23,9 @@ CAN devices must be wired in a **daisy chain** topology — each device connects
 - The **RoboRIO** is always one endpoint (it is the CAN bus master)
 - The **PDH** is always the other endpoint (it has a built-in 120Ω termination resistor)
 
+> [!NOTE]
+> With the release of System Core for the 2027 FRC Season we will most likely be starting multiple parrallel CAN bus chains at the SystemCore. For this reason, we will also need seperate 120Ω resisters to terminate the CAN. Also, the CAN bus does NOT HAVE to terminate at the PDH. We usually keep it this way to avoid having another resister but it can be terminated anywhere with a resister. 
+
 ```
 RoboRIO --> Device 1 --> Device 2 --> Device 3 --> ... --> PDH (termination)
 ```
@@ -67,12 +70,10 @@ Keeping CAN IDs organized by subsystem makes debugging much easier. Here is one 
 
 | ID Range | Use |
 |---|---|
-| 1–4 | Drive motors (one per corner) |
-| 5–8 | Drive encoders or steering motors (if applicable) |
-| 10–19 | Arm / elevator motors |
-| 20–29 | Intake / shooter motors |
-| 30–39 | Other mechanisms |
-| 40+ | Sensors, Pneumatic Hub, etc. |
+| 0-5 | Gyro, PDH, Rio, etc |
+| 10-12, 20-22, 30-32, 40-42 | Drive encoders, steering motors, and drive motors |
+| 50+ | Mechanisms - Usually grouped together |
+| 60+ | Sensors and other Misc (Also can go in 1-10)|
 
 The actual convention your team uses does not matter as long as it is consistent and documented.
 
@@ -91,6 +92,9 @@ Always maintain a written or digital record of every CAN ID assignment. A simple
 | 20 | SPARK Flex | Intake | NEO Vortex |
 
 This record should be version-controlled alongside your robot code.
+
+> [!NOTE]
+> 8726 uses a PDH Diagram which can be found [here](https://docs.google.com/spreadsheets/d/1W4r9z-1OGcxcLtQgmEdVuYnr0KC4oxIJB-q80xxuI-M/edit?usp=drive_web&ouid=109313504472713111007).(Might require access to team drive but it can be found online somewhere) This serves as a good holder for the wiring charts/diagrams and CAN ids. 
 
 ---
 
