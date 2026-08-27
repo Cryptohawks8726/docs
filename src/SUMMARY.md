@@ -65,7 +65,6 @@
   - [Logging and Telemetry](programming/logs.md)
   - [Swerve Drive](programming/swerve.md)
   - [Using WPILib's Controller Classes](programming/controllers.md)
-  - [Programming Autos](programming/autos.md)
   - [Commands](programming/commands.md)
     - [Finite State Machines](programming/fsm.md)
   - [Subsystem Coding Guide](programming/subsystems.md)
